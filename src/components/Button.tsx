@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 
 export enum ButtonTypeEnum {
     primary = "primary",
-    secondary = "secondary"
+    secondary = "secondary",
+    tertiary = "tertiary"
 }
 
 interface ButtonProps {
@@ -34,7 +35,9 @@ const Button: React.FC<ButtonProps> = ({
         if (type === ButtonTypeEnum.primary) {
             return { ...style, backgroundColor: "#5C1F37", border: "1px solid #5C1F37", color: "white"};
         } else if (type === ButtonTypeEnum.secondary) {
-            return { ...style, backgroundColor: "transparent", border: "2px solid black", color: "black"};;
+            return { ...style, backgroundColor: "transparent", border: "2px solid black", color: "black"};
+        } else if (type === ButtonTypeEnum.tertiary) {
+            return { ...style, backgroundColor: "transparent", border: "2px solid black", color: "black"}
         }
         return style
     }
